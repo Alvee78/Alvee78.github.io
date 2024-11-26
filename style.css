@@ -66,6 +66,20 @@ main {
     margin: 1rem 0;
     color: #666;
 }
+.GalleryImage {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.GalleryImage div {
+    border: #333;
+}
+
+
 
 .MyWord .more {
     display: inline-block;
