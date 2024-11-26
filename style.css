@@ -76,7 +76,16 @@ main {
 }
 
 .GalleryImage div {
+    box-shadow: 5px;
     border: #333;
+}
+.ContactInfo {
+    display: flex;
+    flex-direction: column;
+}
+.ContactHead h3 {
+    align-items: center;
+    font-size: 2rem;
 }
 
 
