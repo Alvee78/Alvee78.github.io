@@ -25,6 +25,20 @@ nav ul li a {
     text-decoration: none;
 }
 
+.address {
+    background: #f4f4f4;
+    border-radius: 10px;
+    margin-top: 2rem 0.5rem;
+}
+
+.AboutMe {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: #f4f4f4;
+    border-radius: 10px;
+    margin-top: 2rem 0.5rem;
+}
 main {
     padding: 2rem;
     text-align: center;
