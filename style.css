@@ -12,12 +12,16 @@ header {
 }
 nav ul {
     list-style: none;
-    padding: 0;
+    padding: 0px;
 }
 
 nav ul li {
     display: inline;
     margin: 0 10;
+    padding-left: 1%;
+}
+nav ul li:hover{
+    text-shadow: 2px 2px 30px #fff;
 }
 
 nav ul li a {
@@ -82,10 +86,29 @@ main {
 .ContactInfo {
     display: flex;
     flex-direction: column;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin: 2rem;
+    padding: 0px 2rem;
+    padding-bottom: 1rem;
 }
 .ContactHead h3 {
     text-align: center;
     font-size: 2rem;
+}
+.ContactForm {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin: 2rem;
+    padding: 0px 2rem;
+    padding-bottom: 1rem;
+}
+.Location{
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin: 2rem;
+    padding: 0px 2rem;
+    padding-bottom: 1rem;
 }
 
 
