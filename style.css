@@ -84,7 +84,7 @@ main {
     flex-direction: column;
 }
 .ContactHead h3 {
-    align-items: center;
+    text-align: center;
     font-size: 2rem;
 }
 
