@@ -30,6 +30,8 @@ nav ul li a {
 }
 
 .address {
+    display: flex;
+    justify-content: space-between;
     margin: 2rem;
     padding: 2rem;
     background-color: #f4f4f4;
