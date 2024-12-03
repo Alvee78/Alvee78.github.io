@@ -30,14 +30,15 @@ nav ul li a {
 }
 
 .address {
+    margin: 2rem;
+    padding: 2rem;
     background-color: #f4f4f4;
     border-radius: 10px;
     margin-top: 2rem 0.5rem;
 }
 
-.AboutMe {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+.AboutMe div{
+    margin: 2rem;
     padding: 2rem;
     background-color: #f4f4f4;
     border-radius: 10px;
@@ -83,7 +84,7 @@ main {
     box-shadow: 5px;
     border: #333;
 }
-.ContactInfo {
+.Contacts {
     display: flex;
     flex-direction: column;
     background-color: #f4f4f4;
@@ -151,7 +152,6 @@ main {
 }
 
 .SkillItem {
-    flex: 1;
     padding: 1rem;
     background: #f4f4f4;
     border-radius: 10px;
