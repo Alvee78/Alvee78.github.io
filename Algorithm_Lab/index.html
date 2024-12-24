@@ -123,6 +123,7 @@
             <option value="kmp">KMP</option>
             <option value="dsu">DSU</option>
             <option value="dfs">DFS</option>
+            <option value="meet-in-the-middle">Meet In The Middle</option>
             <option value="square-root-decomposition">Square Root Decomposition</option>
             <option value="rabin-karp">Rabin-Karp</option>
             <option value="number-theory">Number Theory</option>
@@ -281,21 +282,21 @@
         });
     </script>
     <script>
-        // Automatically number all problems globally
+        
         document.addEventListener('DOMContentLoaded', function () {
-            const problems = document.querySelectorAll('.problem'); // Select all problems across all sections
+            const problems = document.querySelectorAll('.problem');
             problems.forEach((problem, index) => {
-                const problemLink = problem.querySelector('a'); // Get the problem link
-                problemLink.textContent = `Problem ${index + 1}`; // Update text content with global numbering
+                const problemLink = problem.querySelector('a'); 
+                problemLink.textContent = `Problem ${index + 1}`; 
             });
         });
-        //div open
+        
         document.querySelectorAll('.problem').forEach(function(problem) {
         problem.addEventListener('click', function() {
-            // Find the <a> tag inside the clicked div
+            
             const link = problem.querySelector('a');
             if (link) {
-                // Open the corresponding link in a new tab
+               
                 window.open(link.href, '_blank');
             }
         });
