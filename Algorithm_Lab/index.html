@@ -102,10 +102,53 @@
             color: white;
             font-size: 0.9em;
         }
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            background-color: #4CAF50;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar li {
+            margin: 0 20px;
+        }
+
+        .navbar-link {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar-link:hover {
+            background-color: #45a049;
+            color: white;
+        }
+
+
     </style>
 </head>
 <body>
     <h1>Programming Problem Organizer</h1>
+    <nav role="navigation" aria-label="Main navigation">
+        <ul class="navbar">
+            <li><a href="index.html" class="navbar-link" aria-label="Go to Algorithm Lab Problem List">Algorithm Lab Problem List</a></li>
+            <li><a href="algorithm-list.html" class="navbar-link" aria-label="Go to Algorithm List">Algorithm List</a></li>
+        </ul>
+    </nav>
+        
 
     <div class="filter">
         <label for="tag-filter">Filter by Tag: </label>
