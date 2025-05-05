@@ -2,7 +2,7 @@
 
 # dependencies
 node_modules/
-
+/calculator
 # Expo
 .expo/
 dist/
