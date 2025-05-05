@@ -9,7 +9,8 @@
     "deploy": "gh-pages -d web-build",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "build": "expo export --web-only --output-dir web-build"
   },
   "dependencies": {
     "expo": "~52.0.46",
