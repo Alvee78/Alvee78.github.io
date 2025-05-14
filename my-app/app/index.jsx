@@ -1,47 +1,32 @@
-import { Text, View, FlatList, Image } from 'react-native';
-import React, { useState, useEffect } from 'react';
-import MyAppBar from './appbar';
+import { useEffect, useState } from 'react';
+import { View, Text, FlatList, TouchableOpacity, Image } from 'react-native';
+import { useRouter } from 'expo-router';
 
-const Home = () => {
-    const [categories, setCategories] = useState([]);
+export default function Home() {
+  const [categories, setCategories] = useState([]);
+  const router = useRouter();
 
-    const fetchCategories = async () => {
-        try {
-            const response = await fetch("https://www.themealdb.com/api/json/v1/1/categories.php");
-            const data = await response.json();
-            setCategories(data.categories);
-        } catch (error) {
-            console.error(error);
-        }
-    };
-    useEffect(() => {
-        fetchCategories();
-    }, []);
+  useEffect(() => {
+    fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
+      .then(res => res.json())
+      .then(data => setCategories(data.categories));
+  }, []);
 
-    const renderItem = ({ item }) => (
-        <View style = {{ flexDirection: 'row'}}>
-            <Image style={{ width: 50, height: 50, margin: 10}} source={{ uri: item.strCategoryThumb }  } />
-            <Text style = {{fontSize: 22,padding: 10}}>{item.strCategory}</Text>
-        </View>
-    );
-
-    return (
-        <View>
-            <MyAppBar />
-            <FlatList
-                data={categories}
-                keyExtractor={(item) => item.idCategory}
-                renderItem={({ item }) => (
-                  <View style = {{ flexDirection: 'row'}}>
-                      <Image style={{ width: 50, height: 50, margin: 10}} source={{ uri: item.strCategoryThumb }  } />
-                      <Text style = {{fontSize: 22,padding: 10}}>{item.strCategory}</Text>
-                  </View>
-              )}
+  return (
+    <View style={{ flex: 1, padding: 16 }}>
+      <FlatList
+        data={categories}
+        keyExtractor={(item) => item.idCategory}
+        renderItem={({ item }) => (
+          <TouchableOpacity style={{margin:10}} onPress={() => router.push(`/category/${item.strCategory}`)}>
+            <Image 
+              source={{ uri: item.strCategoryThumb }} 
+              style={{ width: 200, height: 130 }}
             />
-            <Text>My Home</Text>
-        </View>
-    );
-};
-
-export default Home;
-
+            <Text style ={{fontStyle:'bold'}}>{item.strCategory}</Text>
+          </TouchableOpacity>
+        )}
+      />
+    </View>
+  );
+}
